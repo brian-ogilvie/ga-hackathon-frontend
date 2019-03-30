@@ -1,25 +1,34 @@
 import React from 'react'
 import './Ship.css'
-import {Link} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 
-const Ship = ({id,name,status,kpiAcceptable}) => {
-  return (
-    <div className="Ship">
-        <Link to={`/ships/${id}`}>
-      <div>
+class Ship extends React.PureComponent {
+  constructor() {
+    super()
+    this.state = {
+      redirecting: false
+    }
+  }
 
-        <h1>Ship: {name}</h1>
-
-        <p>Id:{id}</p>
-
-        <p>status: {status}</p>
-
-        <p>kpiAcceptable is {kpiAcceptable.toString()}</p>
+  performRedirect = () => {
+    this.setState({redirecting: true})
+  }
+  render() {
+    const {id,name,status,kpiAcceptable} = this.props
+    if (this.state.redirecting) {
+      return <Redirect to={`/ships/${id}`} />
+    }
+    return (
+      <div className="Ship" onClick={this.performRedirect}>
+        <div>
+          <h1>Ship: {name}</h1>
+          <p>Id:{id}</p>
+          <p>status: {status}</p>
+          <p>kpiAcceptable is {kpiAcceptable.toString()}</p>
+        </div>
       </div>
-        </Link>
-    </div>
-
-  )
+    )
+  }
 }
 
 export default Ship
