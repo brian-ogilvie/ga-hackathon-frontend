@@ -1,0 +1,15 @@
+.Sidebar {
+  height: 100%;
+  width: 185px;
+  overflow: scroll;
+  background-color: #1e3543;
+  position: relative;
+}
+
+.sidebar__heading {
+  margin-top: 0;
+}
+
+.sidebar__content {
+  background-color: #286c7f;
+}

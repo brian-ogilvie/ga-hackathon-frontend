@@ -1,0 +1,17 @@
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #1e3543;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 30px;
+}
+
+.logo-wrapper {
+  width: 185px;
+}

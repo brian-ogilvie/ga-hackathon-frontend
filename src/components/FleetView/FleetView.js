@@ -13,18 +13,29 @@ class FleetView extends React.Component {
           name: "Pinta",
           status: "At Sea",
           kpiAcceptable: false
-        }
-      ]
+        },
+        {
+          id: 2341,
+          name: "Nina",
+          status: "EOSP",
+          kpiAcceptable: true
+        },{
+          id: 5432,
+          name: "Santa Maria",
+          status: "At Sea",
+          kpiAcceptable: false
+        },      ]
     }
   }
 
   render() {
+    const fleetId = this.props.fleetId
     const allShips = this.state.ships.map(ship => {
       return <Ship key={ship.id} {...ship} />
     })
     return (
       <div className="FleetView">
-        <h1>FleetView</h1>
+        <h1>Owner {fleetId}</h1>
         {allShips}
       </div>
     )
