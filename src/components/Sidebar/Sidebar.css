@@ -4,6 +4,8 @@
   overflow: scroll;
   background-color: #1e3543;
   position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .sidebar__heading {
