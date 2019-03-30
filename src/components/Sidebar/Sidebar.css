@@ -1,11 +1,9 @@
 .Sidebar {
   height: 100%;
   width: 185px;
-  overflow: scroll;
+  overflow: hidden;
   background-color: #1e3543;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 .sidebar__heading {
