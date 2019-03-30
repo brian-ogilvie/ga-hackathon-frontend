@@ -15,8 +15,8 @@ class Dashboard extends React.Component {
     return (
       <div className="Dashboard">
         <Switch>
-        <Route path="/" exact render={(props) => {return <Redirect to="/fleets/1" /> }} />
-          <Route path="/fleets/:id" exact render={(props) => {return (
+          <Route path="/" exact render={(props) => {return <Redirect to="/owners/1" /> }} />
+          <Route path="/owners/:id" exact render={(props) => {return (
             <FleetView fleetId={props.match.params.id} />
           )}} />
           <Route path="/ships/:id" render={props => {

@@ -35,7 +35,7 @@ class FleetView extends React.Component {
     })
     return (
       <div className="FleetView">
-        <h1>Fleet {fleetId}</h1>
+        <h1>Owner {fleetId}</h1>
         {allShips}
       </div>
     )

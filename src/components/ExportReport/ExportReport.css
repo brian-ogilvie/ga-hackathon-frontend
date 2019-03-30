@@ -1,0 +1,20 @@
+.ExportReport {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #286c7f;
+  height: 70px;
+  width: 100%;
+}
+
+.exportReport__button {
+  background-color: #f19030;
+  color: white;
+  border-radius: 5px;
+  width: 135px;
+  height: 36px;
+  border: none;
+  text-transform: uppercase;
+}
