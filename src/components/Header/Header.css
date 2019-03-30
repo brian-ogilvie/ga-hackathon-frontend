@@ -8,12 +8,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 30px;
   color: white;
-  padding: 0 30px;
   font-family:'Roboto', sans-serif;
   text-transform: uppercase;
 }
 
 .logo-wrapper {
   width: 185px;
+  padding-left: 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-wrapper img {
+  margin-right: 10px;
+  flex-grow: 0;
 }
