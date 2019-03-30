@@ -1,6 +1,25 @@
 .Ship {
   cursor: pointer;
   margin: 10px;
-  width: 200px;
+  margin-top: 23.5px;
+  width: 45%;
   height: 200px;
+  object-fit: contain;
+  border-radius: 5px;
+  background-color: white;
+
+}
+
+.Ship__name{
+  font-family:'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  background-color: #4ab172;
+  text-align: center;
+  color: white;
 }
