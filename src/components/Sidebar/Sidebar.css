@@ -1,9 +1,16 @@
 .Sidebar {
   height: 100%;
   width: 185px;
-  overflow: scroll;
+  overflow: hidden;
   background-color: #1e3543;
   position: relative;
+  font-family:'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
 }
 
 .sidebar__heading {
