@@ -24,7 +24,14 @@ class FleetView extends React.Component {
           name: "Santa Maria",
           status: "At Sea",
           kpiAcceptable: false
-        },      ]
+        },
+        {
+          id: 8876,
+          name: "Mayflower",
+          status: "Maneuvering",
+          kpiAcceptable: true
+        },      
+      ]
     }
   }
 
@@ -36,7 +43,9 @@ class FleetView extends React.Component {
     return (
       <div className="FleetView">
         <h1>Owner {fleetId}</h1>
-        {allShips}
+        <div className="FleetView__ships">
+          {allShips}
+        </div>
       </div>
     )
   }

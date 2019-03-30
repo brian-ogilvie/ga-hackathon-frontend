@@ -1,0 +1,8 @@
+.FleetView {
+  width: 100%;
+}
+
+.FleetView__ships {
+  display: flex;
+  flex-flow: row wrap;
+}
