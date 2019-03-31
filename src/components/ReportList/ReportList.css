@@ -1,0 +1,36 @@
+.ReportList__table {
+  width: 100%;
+}
+
+.ReportList__title {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.ReportList__table th {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  text-transform: uppercase;
+  color: #73767e;
+  text-align: left;
+  font-weight: normal;
+  font-size: 1.1rem;
+  letter-spacing: .15em;
+  padding-bottom: 8px;
+}
+
+.ReportList__table td {
+  font-size: .8rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.latestUpdates__buttons {
+  padding-left: 8px;
+}
+
+.ReportList__info-row {
+  cursor: pointer;
+}

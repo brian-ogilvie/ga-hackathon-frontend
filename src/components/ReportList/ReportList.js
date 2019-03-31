@@ -5,14 +5,14 @@ const ReportList = ({reports}) => {
   const allReports = (reports.length ?
     reports.map(report => {
       return (
-        <tr key={report.id}>
+        <tr className="ReportList__info-row" key={report.id}>
           <td>{report.timestamp_sutc}</td>
           <td>{report.timestamp_local}</td>
           <td>{report.event}</td>
         </tr>
       )
     }) :
-    null
+    <tr className="ReportList__info-row"><td colSpan="3">Loading</td></tr>
   )
   return (
     <div className="ReportList">
