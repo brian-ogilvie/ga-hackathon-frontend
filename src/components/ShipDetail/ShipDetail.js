@@ -32,9 +32,8 @@ class ShipDetail extends React.PureComponent{
     render(){
         return (
             <div className="ShipDetail">
-                <h1>Ship Detail</h1>
-                <p>Information for {this.state.name}</p>
-                <p>Reports Available: {this.state.reports.length}</p>
+                <h1 className="ShipDetail__page-title">Ship Detail</h1>
+                <h2 className="ShipDetail__name">{this.state.name}</h2>
                 <DashboardWidget><ReportList reports={this.state.reports} /></DashboardWidget>
             </div>
         )

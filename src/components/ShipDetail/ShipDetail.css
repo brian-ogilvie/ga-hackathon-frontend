@@ -1,0 +1,17 @@
+.ShipDetail {
+  animation: fade-in .5s linear;
+}
+
+.ShipDetail__name {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.ShipDetail__page-title {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}

@@ -8,16 +8,29 @@ class LatestUpdates extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-        ships:[],
+        ships:[
+          {
+            name: 'Loading',
+            speed_through_water: 'Loading',
+            speed_over_ground: 'Loading',
+            total_fuel_oil_rob: 'Loading',
+            eta_local: 'Loading',
+            vessel_id: 0
+          }
+        ],
         redirectTo:null
     }
   }
 
   componentDidMount = async ()=>{
+    try {
       const response = await Axios.get('/data/current')
       console.log(response.data)
       await this.setState({ships:response.data.ships})
       console.log(this.state.ships)
+    } catch (e) {
+      console.log(e.message)
+    }
   }
 
   redirectTo = (shipId) =>{
