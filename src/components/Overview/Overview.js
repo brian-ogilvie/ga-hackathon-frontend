@@ -9,6 +9,10 @@ class Overview extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      widgets: [
+        'MetaWidget',
+        'LatestUpdates',
+      ],
       ships: [
         {
           name: "Nina",
@@ -50,11 +54,39 @@ class Overview extends React.Component {
     }
   }
 
+  onDragStart = (e, dragId) => {
+    e.dataTransfer.setData('dragId', dragId)
+  }
+
+  onDragOver = e => {
+    e.preventDefault()
+  }
+
+  onDrop = e => {
+    // const dragId = e.dataTransfer.getData('dragId')
+    this.setState(prevState => {
+      const {widgets} = prevState
+      const newWidgets = widgets.reverse()
+      return {
+        widgets: newWidgets
+      }
+    })
+  }
+
   render() {
+    const widgets = this.state.widgets.map((widget, i) => {
+      return (
+        <DashboardWidget key={i} onDragStart={this.onDragStart} dragId={i}>
+          {(widget === 'LatestUpdates' ? 
+            <LatestUpdates ships={this.state.ships} /> :
+            <MetaWidget /> 
+          )}
+        </DashboardWidget>
+      )
+    })
     return (
-      <div className="Overview">
-        <DashboardWidget><MetaWidget /></DashboardWidget>
-        <DashboardWidget><LatestUpdates ships={this.state.ships} /></DashboardWidget>
+      <div className="Overview" onDragOver={this.onDragOver} onDrop={this.onDrop}>
+        {widgets}
       </div>
     )
   }

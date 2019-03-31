@@ -1,7 +1,7 @@
 import React from 'react'
 import './MetaWidget.css'
 
-const MetaWidget = ({dock, transit, port, delayed}) => {
+const MetaWidget = (props) => {
   return (
     <div className="MetaWidget">
       <div><h3 className="metaWidget__heading">Manager Summary</h3></div>

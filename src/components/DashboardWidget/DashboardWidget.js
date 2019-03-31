@@ -1,10 +1,10 @@
 import React from 'react'
 import './DashboardWidget.css'
 
-const DashboardWidget = ({children, fluid}) => {
+const DashboardWidget = ({children, fluid, onDragStart, dragId}) => {
   const fluidClass = fluid ? 'DashboardWidget--fluid' : ''
   return (
-    <div className={`DashboardWidget ${fluidClass}`}>{children}</div>
+    <div draggable="true" onDragStart={(e) => onDragStart(e, dragId)} className={`DashboardWidget ${fluidClass}`}>{children}</div>
   )
 }
 
