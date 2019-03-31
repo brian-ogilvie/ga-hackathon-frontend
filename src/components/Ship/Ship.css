@@ -8,6 +8,7 @@
   border-radius: 10px;
   background-color: white;
   animation: fade-in .5s linear;
+  box-shadow: 0 0 60px rgba(50, 50, 50, .2);
 }
 
 .Ship__name{
