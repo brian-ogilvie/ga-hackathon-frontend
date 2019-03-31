@@ -1,6 +1,8 @@
 import React from 'react'
 import './Searchbar.css'
 
+import CustomInput from '../CustomInput/CustomInput'
+
 class Searchbar extends React.Component {
   constructor(props) {
     super(props)
@@ -10,8 +12,8 @@ class Searchbar extends React.Component {
   render() {
     return (
       <div className="Searchbar">
-        <input className="Searchbar__input" type="text" />
-        <input className="Searchbar__input" type="text" />
+        <CustomInput placeholder="Sort By" />
+        <CustomInput placeholder="Filter" />
       </div>
     )
   }
