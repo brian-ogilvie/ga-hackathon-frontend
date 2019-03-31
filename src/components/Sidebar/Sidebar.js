@@ -7,8 +7,8 @@ class Sidebar extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      activeList: 'owners',
-      activeItem: 1,
+      activeList: 'overview',
+      activeItem: 0,
       owners: [
         {
           id: 1,
