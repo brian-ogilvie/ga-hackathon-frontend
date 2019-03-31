@@ -7,7 +7,10 @@ import {Redirect} from 'react-router-dom'
 class LatestUpdates extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {ships:[]}
+    this.state = {
+        ships:[],
+        redirectTo:null
+    }
   }
 
   componentDidMount = async ()=>{
@@ -17,14 +20,18 @@ class LatestUpdates extends React.Component {
       console.log(this.state.ships)
   }
 
+  redirectTo = (shipId) =>{
+      this.setState({redirectTo:shipId})
+  }
+
   render() {
     const allShips = (
       this.state.ships ? 
       this.state.ships.map((ship, i) => {
-        const {name, speed_through_water, speed_over_ground, total_fuel_oil_rob, eta_local} = ship
+        const {vessel_id, name, speed_through_water, speed_over_ground, total_fuel_oil_rob, eta_local} = ship
         const anomaly = Math.random() > .5
         return (
-          <tr key={`ship${i}`}>
+          <tr className='latestUpdates__info-row' onClick = {()=>{this.redirectTo(vessel_id)}} key={`ship${i}`}>
             <td>{name}</td>
             <td>{speed_through_water}</td>
             <td>{speed_over_ground}</td>
@@ -37,6 +44,9 @@ class LatestUpdates extends React.Component {
       }) :
       null
     )
+    if (this.state.redirectTo){
+        return <Redirect to = {`/ships/${this.state.redirectTo}`} />
+    }
     return (
       <div className="LatestUpdates">
         <h3 className="latestUpdates__heading">Latest Updates</h3>
