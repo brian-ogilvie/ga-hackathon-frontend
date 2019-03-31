@@ -1,0 +1,21 @@
+.CustomInput {
+  position: relative;
+}
+
+.CustomInput input {
+  margin: 0 10px;
+  width: 200px;
+  border: none;
+  padding: 5px 15px;
+  padding-right: 25px;
+}
+
+.customInput__button {
+  position: absolute;
+  font-size: 1.1rem;
+  color: #286c7f;
+  right: 20px;
+  width: 10px;
+  background: transparent;
+  border: none;
+}
