@@ -3,4 +3,10 @@
   border-radius: 10px;
   margin-bottom: 24px;
   padding: 24px 42px;
+  animation: fade-in .5s linear;
+  box-shadow: 0 0 60px rgba(50, 50, 50, .2);
+}
+
+.DashboardWidget--fluid {
+  padding: 0;
 }

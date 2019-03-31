@@ -17,4 +17,6 @@
   height: 36px;
   border: none;
   text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 40px rgba(50, 50, 50, .8);
 }
