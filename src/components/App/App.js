@@ -6,7 +6,8 @@ import Dashoard from '../Dashboard/Dashboard'
 import Header from '../Header/Header'
 
 class App extends Component {
-  render() {
+  
+    render() {
     return (
       <div className="App">
         <Header />

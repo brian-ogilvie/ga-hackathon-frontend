@@ -30,3 +30,7 @@
 .latestUpdates__buttons {
   padding-left: 8px;
 }
+
+.latestUpdates__info-row{
+  cursor: pointer;
+}
