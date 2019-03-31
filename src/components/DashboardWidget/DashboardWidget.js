@@ -1,9 +1,10 @@
 import React from 'react'
 import './DashboardWidget.css'
 
-const DashboardWidget = ({children}) => {
+const DashboardWidget = ({children, fluid}) => {
+  const fluidClass = fluid ? 'DashboardWidget--fluid' : ''
   return (
-    <div className="DashboardWidget">{children}</div>
+    <div className={`DashboardWidget ${fluidClass}`}>{children}</div>
   )
 }
 

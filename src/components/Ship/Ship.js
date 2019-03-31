@@ -22,9 +22,11 @@ class Ship extends React.PureComponent {
       <div className="Ship" onClick={this.performRedirect}>
         <div>
           <h1 className="Ship__name">{name}</h1>
-          <p>Id:{id}</p>
-          <p>status: {status}</p>
-          <p>kpiAcceptable is {kpiAcceptable.toString()}</p>
+          <div className="Ship__content">
+            <p>Id:{id}</p>
+            <p>status: {status}</p>
+            <p>kpiAcceptable is {kpiAcceptable.toString()}</p>
+          </div>
         </div>
       </div>
     )
