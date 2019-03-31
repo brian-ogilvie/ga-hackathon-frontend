@@ -1,12 +1,21 @@
 import React from 'react'
 import './LatestUpdates.css'
-
+import Axios from 'axios'
 import ActBtn from '../ActBtn/ActBtn'
+
 
 class LatestUpdates extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {ships:[]}
+  }
+
+  componentDidMount = async ()=>{
+      const response = await Axios.get('/data/current')
+
+      console.log(response.data)
+      this.setState({ships:response.data.data})
+      
   }
 
   render() {
