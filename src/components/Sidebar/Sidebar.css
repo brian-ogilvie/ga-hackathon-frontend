@@ -14,7 +14,8 @@
 }
 
 .sidebar__heading {
-  margin-top: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
   margin-left: 25px;
   text-transform: uppercase;
   font-size: 12px;
@@ -23,12 +24,18 @@
 .sidebar__content {
   background-color: #286c7f;
   color: white;
-  padding-top: 40px;
+  padding-top: 15px;
 }
 
 .sidebar__list {
   list-style: none;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 46px;
+}
+
+.sidebar__overview {
+  margin-bottom: 
 }
 
 .sidebar__list-item {
@@ -37,6 +44,7 @@
   align-items: center;
   padding-left: 50px;
   height: 33px;
+  transition: background-color .3s
 }
 
 .sidebar__list-item::before {
@@ -47,6 +55,18 @@
   width: 16px;
   height: 13px;
   background-image: url('/assets/graph/group.png');
+  background-repeat: no-repeat;
+}
+
+.sidebar__kpi::before {
+  height: 16px;
+  background-image: url('/assets/gear/923274-200.png');
+}
+
+.sidebar__add-new::before {
+  height: 17px;
+  width: 17px;
+  background-image: url('/assets/plus/fill-38-fill-39-fill-40.png');
 }
 
 .sidebar__list-item, .sidebar__list-item a {
