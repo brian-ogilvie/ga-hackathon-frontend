@@ -42,7 +42,7 @@ class LatestUpdates extends React.Component {
       this.state.ships ? 
       this.state.ships.map((ship, i) => {
         const {vessel_id, name, speed_through_water, speed_over_ground, total_fuel_oil_rob, eta_local} = ship
-        const anomaly = Math.random() > .5
+        const anomaly = vessel_id === 2 ? true: false
         return (
           <tr className='latestUpdates__info-row' onClick = {()=>{this.redirectTo(vessel_id)}} key={`ship${i}`}>
             <td>{name}</td>
